@@ -1,0 +1,14 @@
+{
+    "weekNumber.weekWord": "Week number + 1",
+    "explorer.confirmDelete": false,
+    "[css]": {
+        "editor.defaultFormatter": "aeschli.vscode-css-formatter"
+    },
+    "editor.formatOnSave": false,
+    "keyboard.dispatch": "keyCode",
+    "editor.lineNumbers": "relative",
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "/home/yairziv/.vimrc",
+    "python.defaultInterpreterPath": "/home/yairziv/repos/venv",
+    "window.zoomLevel": 1
+}
