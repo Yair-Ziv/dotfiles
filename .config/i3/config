@@ -153,7 +153,7 @@ exec_always --no-startup-id setxkbmap -layout il,us
 exec_always --no-startup-id setxkbmap -option grp:win_space_toggle
 
 # toggle tiling / floating
-bindsym $mod+Shift+$a floating toggle
+bindcode $mod+Shift+$a floating toggle
 
 # change focus between tiling / floating windows
 # bindsym $mod+space focus mode_toggle
