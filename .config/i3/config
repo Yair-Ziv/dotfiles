@@ -262,6 +262,7 @@ exec_always --no-startup-id setxkbmap -option caps:escape
 
 
 bindsym Print exec "flameshot gui"
+bindcode $mod+$p exec "flameshot gui"
 
 assign [class="Spotify"] $ws10
 assign [class="brave-browser"] $ws1
