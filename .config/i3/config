@@ -91,7 +91,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindcode $mod+Shift+$q kill
 
 # dmenu to rofi
-bindcode $mod+$d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 800 -opacity "50" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd"
+bindcode $mod+$d exec rofi -show drun -lines 3 -eh 2 -width 100 -padding 800 -opacity "50" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd"
 
 # lock
 bindcode $mod+Shift+$x exec "i3lock -i /home/yairziv/Pictures/Wallpapers/neon.png"
