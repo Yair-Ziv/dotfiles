@@ -126,6 +126,7 @@ alias python='python3'
 alias ipython='ipython3'
 alias bat='batcat'
 alias gdc='git diff --cached'
+alias yz='yazi'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
