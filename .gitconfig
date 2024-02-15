@@ -6,3 +6,5 @@
 	defaultBranch = main
 [alias]
 	staash = stash --all
+[rerere]
+	enabled = true
