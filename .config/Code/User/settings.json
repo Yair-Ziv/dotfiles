@@ -1,5 +1,4 @@
 {
-    "weekNumber.weekWord": "Week number + 1",
     "explorer.confirmDelete": false,
     "[css]": {
         "editor.defaultFormatter": "aeschli.vscode-css-formatter"
