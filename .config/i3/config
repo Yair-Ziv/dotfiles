@@ -98,10 +98,6 @@ bindcode $mod+Shift+$d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 80
 bindcode $mod+Shift+$x exec "i3lock -i /home/yairziv/Pictures/Wallpapers/neon.png"
 exec_always --no-startup-id xidlehook --not-when-fullscreen --timer 600 'i3lock -i /home/yairziv/dotfiles/neon.png -t -ef -n' ''
 
-# move workspace screen
-bindcode $mod+Shift+$o move workspace to output left
-bindcode $mod+Shift+$p move workspace to output right
-
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -209,6 +205,9 @@ bindcode $mod+Shift+$r restart; exec "autorandr --change"
 # exit i3 (logs you out of your X session)
 bindcode $mod+Shift+$e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+# move workspace screen
+bindcode $mod+Shift+$o move workspace to output left
+bindcode $mod+Shift+$p move workspace to output right
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
