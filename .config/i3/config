@@ -208,6 +208,10 @@ bindcode $mod+Shift+$e exec "i3-nagbar -t warning -m 'You pressed the exit short
 # move workspace screen
 bindcode $mod+Shift+$o move workspace to output left
 bindcode $mod+Shift+$p move workspace to output right
+
+# move all workspaces right
+bindcode $mod+Shift+$s move workspace $ws1 to output right
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
