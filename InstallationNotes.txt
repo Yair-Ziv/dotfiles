@@ -3,3 +3,5 @@ https://gist.github.com/Joao-Peterson/dbd6ee1abe480afd6094d266af7ab051
 
 To create dynamic screen detection use autorandr:
 Join screens, log out log in and run autorandr --save {screenName}
+
+Install FiraCode font directly from nerdfonts.com and place in /usr/share/fonts/<custom_dir_name>
