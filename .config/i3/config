@@ -210,7 +210,7 @@ bindcode $mod+Shift+$o move workspace to output left
 bindcode $mod+Shift+$p move workspace to output right
 
 # move all workspaces right
-bindcode $mod+Shift+$s move workspace $ws1 to output right
+bindcode $mod+Shift+$s exec --no-startup-id "~/.config/i3/move_workspaces.sh"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
