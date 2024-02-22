@@ -1,9 +1,20 @@
 #!/bin/bash
 
-exclude_workspace="2: com"
+exclude_workspaces=("$@")
+echo "Received argument: $@" > /tmp/move_workspaces_log.txt
 
+i=0
 i3-msg -t get_workspaces | jq -r '.[].name' | while IFS= read -r workspace; do
-  if [ "$workspace" != "$exclude_workspace" ]; then
+  matched=false
+  echo "Testing $workspace" >> /tmp/move_workspaces_log.txt
+  for excluded_workspace in "${exclude_workspaces[@]}"
+  do
+    if [ "$workspace" == "$excluded_workspace" ]; then
+      matched=true
+    fi
+  done
+  if [ "$matched" = false ]; then
+    echo "Moving $workspace" >> /tmp/move_workspaces_log.txt
     i3-msg "workspace $workspace; move workspace to output right;"
   fi
 done
