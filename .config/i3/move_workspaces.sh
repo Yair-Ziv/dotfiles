@@ -21,5 +21,11 @@ i3-msg -t get_workspaces | jq -r '.[].name' | while IFS= read -r workspace; do
   fi
 done
 
+for excluded_workspace in "${exclude_workspaces[@]}"
+do
+  echo "Moving to workspace remaining of the left side: $excluded_workspace" >> /tmp/move_workspaces_log.txt
+  i3-msg "workspace $excluded_workspace"
+done
+
 echo "Moving back to focused window: $focused_workspace" >> /tmp/move_workspaces_log.txt
 i3-msg "workspace $focused_workspace"
