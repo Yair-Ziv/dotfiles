@@ -3,7 +3,9 @@
 exclude_workspaces=("$@")
 echo "Received argument: $@" > /tmp/move_workspaces_log.txt
 
-i=0
+focused_workspace=$(i3-msg -t get_workspaces | jq -r '.[] | select (.focused) | .name')
+echo "Focused window: $focused_workspace" >> /tmp/move_workspaces_log.txt
+
 i3-msg -t get_workspaces | jq -r '.[].name' | while IFS= read -r workspace; do
   matched=false
   echo "Testing $workspace" >> /tmp/move_workspaces_log.txt
@@ -18,3 +20,6 @@ i3-msg -t get_workspaces | jq -r '.[].name' | while IFS= read -r workspace; do
     i3-msg "workspace $workspace; move workspace to output right;"
   fi
 done
+
+echo "Moving back to focused window: $focused_workspace" >> /tmp/move_workspaces_log.txt
+i3-msg "workspace $focused_workspace"
