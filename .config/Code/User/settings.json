@@ -7,7 +7,7 @@
     "keyboard.dispatch": "keyCode",
     "editor.lineNumbers": "relative",
     "vim.vimrc.enable": true,
-    "vim.vimrc.path": "/home/yairziv/.vimrc",
-    "python.defaultInterpreterPath": "/home/yairziv/repos/venv",
+    "vim.vimrc.path": "~/.vimrc",
+    "python.defaultInterpreterPath": "~/dev/venv",
     "window.zoomLevel": 1,
 }
