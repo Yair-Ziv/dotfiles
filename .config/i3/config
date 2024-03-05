@@ -201,9 +201,9 @@ bindsym $mod+Shift+9 move container to workspace $ws9;  workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 
 # reload the configuration file
-bindcode $mod+Shift+$c reload; exec "autorandr --change"
+bindcode $mod+Shift+$c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindcode $mod+Shift+$r restart; exec "autorandr --change"
+bindcode $mod+Shift+$r restart
 # exit i3 (logs you out of your X session)
 bindcode $mod+Shift+$e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
@@ -263,6 +263,7 @@ bar {
 
 exec_always feh --bg-scale ~/Pictures/Wallpapers/neon.png
 exec_always flameshot
+exec_always autorandr --change
 
 # Set caps as escape
 exec_always --no-startup-id setxkbmap -option caps:escape
