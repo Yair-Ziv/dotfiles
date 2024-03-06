@@ -93,7 +93,7 @@ bindsym $mod+Return exec kitty
 bindcode $mod+Shift+$q kill
 
 # dmenu to rofi
-bindcode $mod+$d exec rofi -show drun -lines 3 -eh 2 -width 100 -padding 800 -opacity "50" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd"
+bindcode $mod+$d exec rofi -show drun -lines 3 -eh 2 -width 100 -padding 800 -opacity "50" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -show-icons
 bindcode $mod+Shift+$d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 800 -opacity "50" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd"
 
 # lock
