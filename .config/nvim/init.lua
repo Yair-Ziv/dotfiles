@@ -101,7 +101,6 @@ require('lazy').setup({
       'folke/neodev.nvim',
     },
   },
-
   {
     -- Autocompletion
     'hrsh7th/nvim-cmp',
@@ -202,7 +201,6 @@ require('lazy').setup({
       end,
     },
   },
-
   {
     -- Theme inspired by Atom
     'navarasu/onedark.nvim',
@@ -211,7 +209,6 @@ require('lazy').setup({
       vim.cmd.colorscheme 'onedark'
     end,
   },
-
   {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
@@ -225,7 +222,6 @@ require('lazy').setup({
       },
     },
   },
-
   {
     -- Add indentation guides even on blank lines
     'lukas-reineke/indent-blankline.nvim',
@@ -570,12 +566,8 @@ wk.register({
 }, { mode = 'v' })
 
 -- Custom which-key
---wk.register {
---  ['<leader>ga'] = { name = 'Git add'}
---}
-
 wk.register{
-  ['<leader>ga'] = 'Git add'
+  ['<leader>gi'] = { ":Git<CR>", "Open [G]it [I]nteractive" },
 }
 
 -- mason-lspconfig requires that these setup functions are called in this order
