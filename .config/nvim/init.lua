@@ -575,10 +575,17 @@ wk.register{
 }
 
 require('silicon').setup({
-  clipboard = true,
-    watermark = {
-      text = ' @Yair-Ziv',
-    },
+  output = {
+    clipboard = true,
+  },
+  theme = 'Dracula',
+  background = '#8877ff',
+  shadow = {
+    blur_radius = 2
+  },
+  watermark = {
+    text = '@Yair-Ziv',
+  }
 })
 
 -- mason-lspconfig requires that these setup functions are called in this order
