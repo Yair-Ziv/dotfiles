@@ -277,6 +277,9 @@ require('lazy').setup({
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
   -- { import = 'custom.plugins' },
+  {
+    'krivahtoo/silicon.nvim', run = './install.sh build'
+  }
 }, {})
 
 -- [[ Setting options ]]
@@ -563,12 +566,20 @@ wk.register {
 wk.register({
   ['<leader>'] = { name = 'VISUAL <leader>' },
   ['<leader>h'] = { 'Git [H]unk' },
+  ['<leader>sc'] = { ":Silicon<CR>", "Silicon Capture" },
 }, { mode = 'v' })
 
 -- Custom which-key
 wk.register{
   ['<leader>gi'] = { ":Git<CR>", "Open [G]it [I]nteractive" },
 }
+
+require('silicon').setup({
+  clipboard = true,
+    watermark = {
+      text = ' @Yair-Ziv',
+    },
+})
 
 -- mason-lspconfig requires that these setup functions are called in this order
 -- before setting up the servers.
