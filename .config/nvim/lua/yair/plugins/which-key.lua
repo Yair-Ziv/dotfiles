@@ -20,6 +20,8 @@ return {
       ['<leader>t'] = { name = '[T]oggle', _ = 'which_key_ignore' },
       ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
       ['<leader>e'] = { name = '[E]xplorer', _ = 'which_key_ignore'},
+      ['<leader>v'] = { name = '[V]im', _ = 'which_key_ignore'},
+      ['<leader>vs'] = { name = '[V]im [S]plit', _ = 'which_key_ignore'},
     }
 
     -- register which-key VISUAL mode
