@@ -3,13 +3,15 @@ return {
   'nvim-treesitter/nvim-treesitter',
   dependencies = {
     'nvim-treesitter/nvim-treesitter-textobjects',
+    'windwp/nvim-ts-autotag'
   },
+  event = { "BufReadPre", "BufNewFile" },
   build = ':TSUpdate',
   config = function()
     vim.defer_fn(function()
       require('nvim-treesitter.configs').setup {
         -- Add languages to be installed here that you want installed for treesitter
-        ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'c_sharp'},
+        ensure_installed = { 'c', 'cpp', 'go', 'html', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'c_sharp'},
 
         -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
         auto_install = false,
@@ -19,6 +21,9 @@ return {
 
         highlight = { enable = true },
         indent = { enable = true },
+        autotag = {
+          enable = true,
+        },
         incremental_selection = {
           enable = true,
           keymaps = {
