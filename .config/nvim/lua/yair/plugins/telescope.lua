@@ -9,7 +9,8 @@ return {
         return vim.fn.executable 'make' == 1 -- Only load if `make` is available. Make sure you have the system requirements installed.
       end,
     },
-    "nvim-tree/nvim-web-devicons"
+    "nvim-tree/nvim-web-devicons",
+    "folke/todo-comments.nvim"
   },
   config = function()
     local telescope = require("telescope")
@@ -88,8 +89,9 @@ return {
     kmap.set('n', '<leader>sh', ts_builtin.help_tags, { desc = '[S]earch [H]elp' })
     kmap.set('n', '<leader>sw', ts_builtin.grep_string, { desc = '[S]earch current [W]ord' })
     kmap.set('n', '<leader>sg', ts_builtin.live_grep, { desc = '[S]earch by [G]rep' })
-    kmap.set('n', '<leader>sG', ':LiveGrepGitRoot<cr>', { desc = '[S]earch by [G]rep on Git Root' })
+    kmap.set('n', '<leader>sG', ':LiveGrepGitRoot<CR>', { desc = '[S]earch by [G]rep on Git Root' })
     kmap.set('n', '<leader>sr', ts_builtin.resume, { desc = '[S]earch [R]esume' })
+    kmap.set('n', '<leader>st', ':TodoTelescope<CR>', { desc = '[S]earch [T]odos' })
 
     telescope.load_extension("fzf")
   end
