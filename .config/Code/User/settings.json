@@ -10,4 +10,5 @@
     "vim.vimrc.path": "~/.vimrc",
     "python.defaultInterpreterPath": "~/dev/venv",
     "window.zoomLevel": 1,
+    "workbench.colorTheme": "Tokyo Night",
 }
