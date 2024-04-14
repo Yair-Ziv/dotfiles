@@ -1,3 +1,4 @@
+-- Nice screen capture utility
 return {
   'krivahtoo/silicon.nvim',
   run = './install.sh build',

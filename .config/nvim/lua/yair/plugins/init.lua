@@ -1,3 +1,4 @@
+-- All simple imports
 return {
   -- Git related plugins
   'tpope/vim-fugitive',

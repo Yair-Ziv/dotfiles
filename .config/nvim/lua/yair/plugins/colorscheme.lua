@@ -1,3 +1,4 @@
+-- Color scheme
 return {
   -- Theme inspired by Atom
   'folke/tokyonight.nvim',

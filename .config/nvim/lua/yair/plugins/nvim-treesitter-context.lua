@@ -1,3 +1,4 @@
+-- Keeps the current context at the top of the editor
 return {
   'nvim-treesitter/nvim-treesitter-context',
   config = function()

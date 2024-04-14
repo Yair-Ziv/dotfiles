@@ -1,3 +1,4 @@
+-- Maximizes a pane in vim
 return {
   "szw/vim-maximizer",
   keys = {
