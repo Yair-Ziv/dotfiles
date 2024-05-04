@@ -22,10 +22,11 @@ return {
         { type = 'text', val = 'Quick Links', opts = { hl = 'SpecialComment', position = 'center' } },
         { type = 'padding', val = 1 },
         dashboard.button( 'e', icons.kinds.new.File .. '> New file' , ':enew<CR>' ),
-        dashboard.button( 'o', icons.kinds.new.FindFIle .. '> Find file', ':Telescope oldfiles<CR>' ),
-        dashboard.button( '<SPC> e e', icons.ui.open_folder .. '> Open file explorer'),
-        dashboard.button( 'l', icons.kinds.custom_icons.Lazy .. '> Open Lazy', ':Lazy<CR>'),
-        dashboard.button( 'q', icons.ui.buffer_close .. '> Close NVIM', ':qa<CR>')
+        dashboard.button( 'o', icons.ui.files .. '> View old files', ':Telescope oldfiles<CR>' ),
+        dashboard.button( '<SPC> e e', icons.ui.open_folder .. '> Open file explorer' ),
+        dashboard.button( '<SPC> s f', icons.kinds.new.FindFIle .. '> Search for file' ),
+        dashboard.button( 'l', icons.kinds.custom_icons.Lazy .. '> Open Lazy', ':Lazy<CR>' ),
+        dashboard.button( 'q', icons.ui.buffer_close .. '> Close NVIM', ':qa<CR>' )
       },
       position = 'center'
     }
