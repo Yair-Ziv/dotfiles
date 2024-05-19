@@ -98,8 +98,6 @@ source ~/dev/venv/bin/activate
 #   export EDITOR='mvim'
 # fi
 
-alias vim=nvim
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -111,25 +109,32 @@ alias vim=nvim
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ls='ls --color=auto'
+alias vim=nvim
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias lll='ls -alFh'
 alias la='ls -a'
 alias l='ls -CF'
+
 alias tmux='tmux -u'
 alias ta='tmux -u a'
 alias tat='tmux -u a -t'
 alias tls='tmux -u ls'
-alias sl='sl -alFe'
+
+alias sl='sl -ale'
+
 alias python='python3'
 alias ipython='ipython3'
+
 alias bat='batcat'
+
 alias gdc='git diff --cached'
+
 alias yz='yazi'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
