@@ -17,6 +17,8 @@ kmap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnosti
 kmap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 kmap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
+-- Paste without losing buffer
+kmap.set('v', '<leader>p', "\"_dP")
 
 -- Window management
 kmap.set('n', '<leader>vsv', '<C-w>v', { desc = 'Split window vertically' })
