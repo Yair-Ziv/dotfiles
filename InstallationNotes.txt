@@ -8,3 +8,5 @@ Install FiraCode font directly from nerdfonts.com and place in /usr/share/fonts/
 
 Install fzf from git repo: https://github.com/junegunn/fzf?tab=readme-ov-file#using-git
 To use fzf with fd in default command install fd: https://github.com/sharkdp/fd?tab=readme-ov-file#on-ubuntu
+
+To install nvim silicon: Go to ~/.local/share/nvim/lazy/silicon.nvim/ and run install.sh
