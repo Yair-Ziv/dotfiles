@@ -10,3 +10,6 @@ Install fzf from git repo: https://github.com/junegunn/fzf?tab=readme-ov-file#us
 To use fzf with fd in default command install fd: https://github.com/sharkdp/fd?tab=readme-ov-file#on-ubuntu
 
 To install nvim silicon: Go to ~/.local/share/nvim/lazy/silicon.nvim/ and run install.sh
+
+To install Tmux Plugin Manager (TPM):
+https://github.com/tmux-plugins/tpm?tab=readme-ov-file#installation
