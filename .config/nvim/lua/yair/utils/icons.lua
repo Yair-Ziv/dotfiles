@@ -226,7 +226,7 @@ M.icons = {
   },
   ui = {
     file = "󰈔",
-    files = "󰈢",
+    files = "󰈢 ",
     folder = "󰉖",
     folders = "󰉓",
     open_folder = "󰝰 ",
