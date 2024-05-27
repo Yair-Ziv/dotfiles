@@ -125,6 +125,8 @@ alias tmux='tmux -u'
 alias ta='tmux -u a'
 alias tat='tmux -u a -t'
 alias tls='tmux -u ls'
+alias tn='tmux -u new -s'
+alias tnn='tmux -u new-session -d -s'
 
 alias sl='sl -ale'
 
