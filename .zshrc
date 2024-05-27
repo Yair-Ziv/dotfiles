@@ -79,7 +79,7 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker battery colorize web-search sudo)
+plugins=(git docker colored-man-pages battery colorize web-search sudo)
 
 source $ZSH/oh-my-zsh.sh
 source ~/dev/venv/bin/activate
