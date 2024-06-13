@@ -79,7 +79,7 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker colored-man-pages battery colorize web-search sudo)
+plugins=(git docker docker-compose colored-man-pages battery colorize web-search sudo)
 
 source $ZSH/oh-my-zsh.sh
 source ~/dev/venv/bin/activate
@@ -126,7 +126,7 @@ alias ta='tmux -u a'
 alias tat='tmux -u a -t'
 alias tls='tmux -u ls'
 alias tn='tmux -u new -s'
-alias tnn='tmux -u new-session -d -s'
+alias tnn='function _tnew() { [[ -n "$TMUX" ]] && { tmux new-session -d -s "$1" && tmux switch-client -t "$1"; } || echo "You are not inside a tmux session. Please start tmux first."; }; _tnew'
 
 alias sl='sl -ale'
 
