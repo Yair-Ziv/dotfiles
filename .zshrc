@@ -79,10 +79,11 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker docker-compose colored-man-pages battery colorize web-search sudo)
+plugins=(git docker docker-compose colored-man-pages battery colorize web-search kubectl)
 
 source $ZSH/oh-my-zsh.sh
-source ~/dev/venv/bin/activate
+source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source ~/dev/venv/bin/activate
 
 # User configuration
 
@@ -136,6 +137,7 @@ alias ipython='ipython3'
 alias bat='batcat'
 
 alias gdc='git diff --cached'
+alias gcan='git commit --amend --no-edit'
 
 alias yz='yazi'
 
@@ -153,7 +155,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-eval "$(zoxide init zsh)"
+# eval "$(zoxide init zsh)"
 
 # FZF Config
 eval "$(fzf --zsh)"

@@ -17,7 +17,7 @@ local on_attach = function(_, bufnr)
 
   local ts_builtin = require('telescope.builtin')
 
-  nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
+  nmap('<leader>cr', vim.lsp.buf.rename, '[C]ode [R]ename')
   nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
   nmap('gd', ts_builtin.lsp_definitions, '[G]oto [D]efinition')
