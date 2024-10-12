@@ -138,6 +138,7 @@ alias bat='batcat'
 
 alias gdc='git diff --cached'
 alias gcan='git commit --amend --no-edit'
+alias gdst='git diff --stat'
 
 alias yz='yazi'
 
