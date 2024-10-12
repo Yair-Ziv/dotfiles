@@ -102,51 +102,11 @@ source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 if [[ -f "$HOME/.aliases" ]]; then
   source "$HOME/.aliases"
 else
   echo "$HOME/.aliases does not exist."
 fi
-
-alias vim=nvim
-
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-
-alias ls='ls --color=auto'
-alias ll='ls -alF'
-alias lll='ls -alFh'
-alias la='ls -a'
-alias l='ls -CF'
-
-alias tmux='tmux -u'
-alias ta='tmux -u a'
-alias tat='tmux -u a -t'
-alias tls='tmux -u ls'
-alias tn='tmux -u new -s'
-alias tnn='function _tnew() { [[ -n "$TMUX" ]] && { tmux new-session -d -s "$1" && tmux switch-client -t "$1"; } || echo "You are not inside a tmux session. Please start tmux first."; }; _tnew'
-
-alias sl='sl -ale'
-
-alias python='python3'
-alias ipython='ipython3'
-
-alias bat='batcat'
-
-alias gdc='git diff --cached'
-alias gcan='git commit --amend --no-edit'
-alias gdst='git diff --stat'
-
-alias yz='yazi'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -161,8 +121,6 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# eval "$(zoxide init zsh)"
 
 # FZF Config
 eval "$(fzf --zsh)"
