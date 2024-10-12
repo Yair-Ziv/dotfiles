@@ -1,0 +1,47 @@
+# vim: ft=zsh
+
+# Convert nvim to vim
+alias vim=nvim
+
+# GREP
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# LS
+alias ls='ls --color=auto'
+alias ll='ls -alF'
+alias lll='ls -alFh'
+alias la='ls -a'
+alias l='ls -CF'
+
+# TMUX
+alias tmux='tmux -u'
+alias ta='tmux -u a'
+alias tat='tmux -u a -t'
+alias tls='tmux -u ls'
+alias tn='tmux -u new -s'
+alias tnn='function _tnew() { [[ -n "$TMUX" ]] && { tmux new-session -d -s "$1" && tmux switch-client -t "$1"; } || echo "You are not inside a tmux session. Please start tmux first."; }; _tnew' # Create new named tmux from inside a tmux session
+
+# Python
+alias python='python3'
+alias ipython='ipython3'
+
+# GIT
+alias gdc='git diff --cached'
+alias gcan='git commit --amend --no-edit'
+alias gdst='git diff --stat'
+
+# YAZI
+alias yz='yazi'
+
+
+# SL - The annoying train
+alias sl='sl -ale'
+
+
+if command -v batcat >/dev/null 2>&1; then
+  alias cat='batcat'
+elif command -v bat >/dev/null 2>&1; then
+  alias cat='bat'
+fi
