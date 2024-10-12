@@ -110,6 +110,12 @@ source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+if [[ -f "$HOME/.aliases" ]]; then
+  source "$HOME/.aliases"
+else
+  echo "$HOME/.aliases does not exist."
+fi
+
 alias vim=nvim
 
 alias grep='grep --color=auto'
