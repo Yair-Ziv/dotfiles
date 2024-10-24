@@ -6,7 +6,13 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
+#
+# Ensure no duplicates in PATH
 export PATH=$HOME/bin:/usr/local/bin:/home/yairziv/.local/bin:$PATH
+export PATH=$(echo "$PATH" | awk -v RS=: -v ORS=: '!n[$0]++' | sed 's/:$//')
+#export PATH="/opt/homebrew/opt/arm-none-eabi-gcc@8/bin:$PATH"
+#export LDFLAGS="-L/opt/homebrew/opt/arm-none-eabi-gcc@8/lib"
+#export PATH="/opt/homebrew/opt/arm-none-eabi-binutils/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
