@@ -1,3 +1,6 @@
+To create symlink for files:
+ln -s {absolute_repo_file_path} {absolute_dest_file_path}
+
 In case using gmk 67 and fn keys are reversed (using function keys instead of f1-f11):
 https://gist.github.com/Joao-Peterson/dbd6ee1abe480afd6094d266af7ab051
 
