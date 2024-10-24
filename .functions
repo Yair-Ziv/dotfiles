@@ -1,0 +1,5 @@
+# vim: ft=zsh
+
+function up() {
+    cd $(eval printf '../%.0s' {1..$1})
+}

@@ -114,6 +114,12 @@ else
   echo "$HOME/.aliases does not exist."
 fi
 
+if [[ -f "$HOME/.functions" ]]; then
+  source "$HOME/.functions"
+else
+  echo "$HOME/.functions does not exist."
+fi
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
