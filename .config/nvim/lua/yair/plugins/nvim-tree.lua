@@ -25,7 +25,7 @@ return {
       filters = {
         custom = { ".DS_Store" }
       },
-      
+
       git = {
         ignore = false
       }
@@ -34,8 +34,8 @@ return {
     -- Keymaps
     local kmap = vim.keymap
 
-    kmap.set("n", "<leader>ee", ":NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
-    kmap.set("n", "<leader>ef", ":NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer or curent folder" })
+    kmap.set("n", "<leader>ef", ":NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
+    kmap.set("n", "<leader>ee", ":NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer or curent folder" })
     kmap.set("n", "<leader>ec", ":NvimTreeCollapse<CR>", { desc = "Collapse file explorer" })
     kmap.set("n", "<leader>er", ":NvimTreeRefresh<CR>", { desc = "Refresh file explorer" })
   end
