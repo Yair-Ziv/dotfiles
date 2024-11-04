@@ -11,39 +11,42 @@ return {
     local wk = require('which-key')
 
     -- document existing key chains
-    wk.register {
-      ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
-      ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
-      ['<leader>e'] = { name = '[E]xplorer', _ = 'which_key_ignore'},
-      ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
-      ['<leader>h'] = { name = 'Git [H]unk', _ = 'which_key_ignore' },
-      ['<leader>k'] = { name = 'Cloa[K]', _ = 'which_key_ignore' },
-      ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
-      ['<leader>t'] = { name = '[T]oggle', _ = 'which_key_ignore' },
-      ['<leader>v'] = { name = '[V]im', _ = 'which_key_ignore'},
-      ['<leader>vs'] = { name = '[V]im [S]plit', _ = 'which_key_ignore'},
-      ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
+    wk.add {
+      { "<leader>c", group = "[C]ode" },
+      { "<leader>d", group = "[D]ocument" },
+      { "<leader>e", group = "[E]xplorer" },
+      { "<leader>g", group = "[G]it" },
+      { "<leader>h", group = "Git [H]unk" },
+      { "<leader>k", group = "Cloa[K]" },
+      { "<leader>s", group = "[S]earch" },
+      { "<leader>t", group = "[T]oggle" },
+      { "<leader>v", group = "[V]im" },
+      { "<leader>vs", group = "[V]im [S]plit" },
+      { "<leader>w", group = "[W]orkspace" },
     }
 
     -- register which-key VISUAL mode
     -- required for visual <leader>hs (hunk stage) to work
-    wk.register({
-      ['<leader>'] = { name = 'VISUAL <leader>' },
-      ['<leader>h'] = { 'Git [H]unk' },
-      ['<leader>sc'] = { ":Silicon<CR>", "Silicon Capture" },
-    }, { mode = 'v' })
+    wk.add({
+      {
+        mode = { "v" },
+        { "<leader>", group = "VISUAL <leader>" },
+        { "<leader>h", desc = "Git [H]unk" },
+        { "<leader>sc", ":Silicon<CR>", desc = "Silicon Capture" },
+      }
+    })
 
     -- Git
-    wk.register{
-      ['<leader>gi'] = { ":Git<CR>", "Open [G]it [I]nteractive" },
+    wk.add{
+      { "<leader>gi", ":Git<CR>", desc = "Open [G]it [I]nteractive" },
     }
 
     -- Cloak
-    wk.register {
-      ['<leader>kt'] = { ':CloakToggle<CR>', 'Toggle Cloak' },
-      ['<leader>ke'] = { ':CloakEnable<CR>', 'Cloak Enable' },
-      ['<leader>kd'] = { ':CloakDisable<CR>', 'Cloak Disable' },
-      ['<leader>kp'] = { ':CloakPreviewLine<CR>', 'Preview Cloak' },
+    wk.add {
+      { "<leader>kd", ":CloakDisable<CR>", desc = "Cloak Disable" },
+      { "<leader>ke", ":CloakEnable<CR>", desc = "Cloak Enable" },
+      { "<leader>kp", ":CloakPreviewLine<CR>", desc = "Preview Cloak" },
+      { "<leader>kt", ":CloakToggle<CR>", desc = "Toggle Cloak" },
     }
 
   end
