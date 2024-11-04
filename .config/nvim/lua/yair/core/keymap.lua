@@ -28,3 +28,6 @@ kmap.set('n', '<leader>vsh', '<C-w>s', { desc = 'Split window horizontally' })
 -- Funnily enough, it was hard to type that comment
 -- cause it kept going back to normal mode and deleting the jj (it happened again)
 kmap.set('i', 'jj', '<Esc>')
+
+-- Open lazy
+kmap.set('n', '<leader>l', ':Lazy<cr>', { desc = 'Open lazy' })
