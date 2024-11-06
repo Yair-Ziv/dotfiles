@@ -42,3 +42,6 @@ opt.signcolumn = 'yes'
 -- Decrease update time
 opt.updatetime = 250
 opt.timeoutlen = 300
+
+-- Hide default command line
+opt.cmdheight = 0
