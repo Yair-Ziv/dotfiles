@@ -22,8 +22,7 @@ export EDITOR=nvim
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="yairtheme"
-ZSH_THEME="af-magic"
+ZSH_THEME="amuse"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -89,6 +88,9 @@ plugins=(git docker docker-compose colored-man-pages battery colorize web-search
 
 source $ZSH/oh-my-zsh.sh
 source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg='#5c9789',underline
+ZSH_HIGHLIGHT_STYLES[precommand]=fg='#5c9789',underline
+ZSH_HIGHLIGHT_STYLES[arg0]=fg='#77bfb4'
 # source ~/dev/venv/bin/activate
 
 # User configuration
