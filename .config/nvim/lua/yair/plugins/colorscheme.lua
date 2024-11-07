@@ -1,11 +1,11 @@
 -- Color scheme
 return {
   -- Theme inspired by Atom
-  'folke/tokyonight.nvim',
+  'rebelot/kanagawa.nvim',
   --'navarasu/onedark.nvim',
   priority = 1000,
   config = function()
     -- vim.cmd.colorscheme('onedark')
-    vim.cmd.colorscheme('tokyonight')
+    vim.cmd.colorscheme('kanagawa')
   end,
 }
