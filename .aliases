@@ -31,6 +31,8 @@ alias ipython='ipython3'
 alias gdc='git diff --cached'
 alias gcan='git commit --amend --no-edit'
 alias gdst='git diff --stat'
+alias gapp='git apply'
+alias gap='git add -p'
 
 # YAZI
 alias yz='yazi'
