@@ -26,6 +26,7 @@ alias tnn='function _tnew() { [[ -n "$TMUX" ]] && { tmux new-session -d -s "$1" 
 # Python
 alias python='python3'
 alias ipython='ipython3'
+alias pip='pip3'
 
 # GIT
 alias gdc='git diff --cached'

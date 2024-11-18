@@ -91,7 +91,6 @@ source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg='#5c9789',underline
 ZSH_HIGHLIGHT_STYLES[precommand]=fg='#5c9789',underline
 ZSH_HIGHLIGHT_STYLES[arg0]=fg='#77bfb4'
-# source ~/dev/venv/bin/activate
 
 # User configuration
 
@@ -120,6 +119,10 @@ if [[ -f "$HOME/.functions" ]]; then
   source "$HOME/.functions"
 else
   echo "$HOME/.functions does not exist."
+fi
+
+if [[ -f "$HOME/.venvs" ]]; then
+  source "$HOME/.venvs"
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
