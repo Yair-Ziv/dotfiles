@@ -12,7 +12,7 @@ return {
 
     -- document existing key chains
     wk.add {
-      { "<leader>c", group = "[C]ode" },
+      { "<leader>c", group = "[C]ode/loak" },
       { "<leader>d", group = "[D]ocument" },
       { "<leader>e", group = "[E]xplorer" },
       { "<leader>g", group = "[G]it" },

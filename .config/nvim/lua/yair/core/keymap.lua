@@ -31,3 +31,8 @@ kmap.set('i', 'jj', '<Esc>')
 
 -- Open lazy
 kmap.set('n', '<leader>l', ':Lazy<cr>', { desc = 'Open lazy' })
+
+-- Cloak
+kmap.set('n', '<leader>cd', ':CloakDisable<cr>', { desc = 'Disable Cloak' })
+kmap.set('n', '<leader>ce', ':CloakEnable<cr>', { desc = 'Enable Cloak' })
+kmap.set('n', '<leader>ct', ':CloakToggle<cr>', { desc = 'Toggle Cloak' })
