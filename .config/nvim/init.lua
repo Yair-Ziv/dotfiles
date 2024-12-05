@@ -41,17 +41,5 @@ P.S. You can delete this when you're done too. It's your config now :)
 require("yair.core")
 require("yair.lazy")
 
--- [[ Highlight on yank ]]
--- See `:help vim.highlight.on_yank()`
-local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
-vim.api.nvim_create_autocmd('TextYankPost', {
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-  group = highlight_group,
-  pattern = '*',
-})
-
-
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
