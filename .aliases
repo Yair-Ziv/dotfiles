@@ -38,13 +38,20 @@ alias gap='git add -p'
 # YAZI
 alias yz='yazi'
 
-
 # SL - The annoying train
 alias sl='sl -ale'
 
 
+# Batcat
 if command -v batcat >/dev/null 2>&1; then
   alias cat='batcat'
 elif command -v bat >/dev/null 2>&1; then
   alias cat='bat'
 fi
+
+# Docker
+dcupe() {
+  env_file="$1"
+  shift
+  docker-compose --env-file "$env_file" up "$@"
+}
