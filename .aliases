@@ -51,7 +51,15 @@ fi
 
 # Docker
 dcupe() {
+  if [ $# -lt 1 ]; then
+    echo "Error: No env file path provided."
+    echo "Usage: $0 <env-file path>"
+    return 1
+  fi
   env_file="$1"
   shift
   docker-compose --env-file "$env_file" up "$@"
 }
+
+# Unaliases
+unalias y
