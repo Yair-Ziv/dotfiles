@@ -29,11 +29,12 @@ alias ipython='ipython3'
 alias pip='pip3'
 
 # GIT
-alias gdc='git diff --cached'
-alias gcan='git commit --amend --no-edit'
-alias gdst='git diff --stat'
-alias gapp='git apply'
 alias gap='git add -p'
+alias gapp='git apply'
+alias gcan='git commit --amend --no-edit'
+alias gdc='git diff --cached'
+alias gdst='git diff --stat'
+alias gce='git commit --allow-empty'
 
 # YAZI
 alias yz='yazi'
