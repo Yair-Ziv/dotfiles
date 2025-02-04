@@ -3,3 +3,4 @@ set main-view-commit-title-refs = yes
 set main-view-author-display = full
 set main-view-date-display = custom
 set ignore-case = true
+set vertical-split = yes
