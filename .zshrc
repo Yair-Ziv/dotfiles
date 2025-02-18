@@ -19,7 +19,7 @@ export ZSH="$HOME/.oh-my-zsh"
 export EDITOR=nvim
 
 # THEME
-ZSH_THEME="amuse"
+ZSH_THEME="re5et"
 
 # PLUGINS
 plugins=(git docker docker-compose colored-man-pages battery colorize web-search kubectl zsh-autosuggestions yarn)
