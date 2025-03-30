@@ -83,16 +83,16 @@ return {
         prompt_title = 'Live Grep in Open Files',
       }
     end
-    kmap.set('n', '<leader>s/', telescope_live_grep_open_files, { desc = '[S]earch [/] in Open Files' })
-    kmap.set('n', '<leader>ss', ts_builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
+    kmap.set('n', '<leader>f/', telescope_live_grep_open_files, { desc = '[S]earch [/] in Open Files' })
+    kmap.set('n', '<leader>fs', ts_builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
     kmap.set('n', '<leader>gf', ts_builtin.git_files, { desc = 'Search [G]it [F]iles' })
-    kmap.set('n', '<leader>sf', ts_builtin.find_files, { desc = '[S]earch [F]iles' })
-    kmap.set('n', '<leader>sh', ts_builtin.help_tags, { desc = '[S]earch [H]elp' })
-    kmap.set('n', '<leader>sw', ts_builtin.grep_string, { desc = '[S]earch current [W]ord' })
-    kmap.set('n', '<leader>sg', ts_builtin.live_grep, { desc = '[S]earch by [G]rep' })
-    kmap.set('n', '<leader>sG', ':LiveGrepGitRoot<CR>', { desc = '[S]earch by [G]rep on Git Root' })
-    kmap.set('n', '<leader>sr', ts_builtin.resume, { desc = '[S]earch [R]esume' })
-    kmap.set('n', '<leader>st', ':TodoTelescope<CR>', { desc = '[S]earch [T]odos' })
+    kmap.set('n', '<leader>ff', ts_builtin.find_files, { desc = '[S]earch [F]iles' })
+    kmap.set('n', '<leader>fh', ts_builtin.help_tags, { desc = '[S]earch [H]elp' })
+    kmap.set('n', '<leader>fw', ts_builtin.grep_string, { desc = '[S]earch current [W]ord' })
+    kmap.set('n', '<leader>fg', ts_builtin.live_grep, { desc = '[S]earch by [G]rep' })
+    kmap.set('n', '<leader>fG', ':LiveGrepGitRoot<CR>', { desc = '[S]earch by [G]rep on Git Root' })
+    kmap.set('n', '<leader>fr', ts_builtin.resume, { desc = '[S]earch [R]esume' })
+    kmap.set('n', '<leader>ft', ':TodoTelescope<CR>', { desc = '[S]earch [T]odos' })
 
     telescope.load_extension("fzf")
   end

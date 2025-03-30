@@ -18,7 +18,7 @@ return {
       { "<leader>g", group = "[G]it" },
       { "<leader>h", group = "Git [H]unk" },
       { "<leader>k", group = "Cloa[K]" },
-      { "<leader>s", group = "[S]earch" },
+      { "<leader>f", group = "[F]ind" },
       { "<leader>t", group = "[T]oggle" },
       { "<leader>v", group = "[V]im" },
       { "<leader>vs", group = "[V]im [S]plit" },
