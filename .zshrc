@@ -22,7 +22,7 @@ export EDITOR=nvim
 ZSH_THEME="re5et"
 
 # PLUGINS
-plugins=(git docker docker-compose colored-man-pages battery colorize web-search kubectl zsh-autosuggestions yarn)
+plugins=(battery colorize colored-man-pages docker docker-compose git kubectl web-search yarn zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -31,21 +31,9 @@ ZSH_HIGHLIGHT_STYLES[precommand]=fg='#5c9789',underline
 ZSH_HIGHLIGHT_STYLES[arg0]=fg='#77bfb4'
 
 # CUSTOM SOURCES
-if [[ -f "$HOME/.aliases" ]]; then
-  source "$HOME/.aliases"
-else
-  echo "$HOME/.aliases does not exist."
-fi
-
-if [[ -f "$HOME/.functions" ]]; then
-  source "$HOME/.functions"
-else
-  echo "$HOME/.functions does not exist."
-fi
-
-if [[ -f "$HOME/.venvs" ]]; then
-  source "$HOME/.venvs"
-fi
+[[ -f ~/.aliases ]] && source ~/.aliases
+[[ -f ~/.functions ]] && source ~/.functions
+[[ -f ~/.venvs ]] && source ~/.venvs
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
