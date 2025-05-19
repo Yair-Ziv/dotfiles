@@ -17,12 +17,13 @@ export PATH=$(echo "$PATH" | awk -v RS=: -v ORS=: '!n[$0]++' | sed 's/:$//')
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR=nvim
+export ZOXIDE_CMD_OVERRIDE=cd
 
 # THEME
 ZSH_THEME="re5et"
 
 # PLUGINS
-plugins=(battery colorize colored-man-pages docker docker-compose git kubectl web-search yarn zsh-autosuggestions)
+plugins=(battery colorize colored-man-pages docker docker-compose git kubectl web-search yarn zoxide zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
