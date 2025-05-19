@@ -90,6 +90,7 @@ return {
     kmap.set('n', '<leader>fh', ts_builtin.help_tags, { desc = '[S]earch [H]elp' })
     kmap.set('n', '<leader>fw', ts_builtin.grep_string, { desc = '[S]earch current [W]ord' })
     kmap.set('n', '<leader>fg', ts_builtin.live_grep, { desc = '[S]earch by [G]rep' })
+    kmap.set('n', '<leader>fm', ts_builtin.marks, { desc = '[S]earch by [M]arks'})
     kmap.set('n', '<leader>fG', ':LiveGrepGitRoot<CR>', { desc = '[S]earch by [G]rep on Git Root' })
     kmap.set('n', '<leader>fr', ts_builtin.resume, { desc = '[S]earch [R]esume' })
     kmap.set('n', '<leader>ft', ':TodoTelescope<CR>', { desc = '[S]earch [T]odos' })
