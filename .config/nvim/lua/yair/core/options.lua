@@ -46,4 +46,6 @@ opt.timeoutlen = 300
 -- Hide default command line
 opt.cmdheight = 0
 
-opt.showcmdloc='statusline'
+opt.showcmdloc ='statusline'
+
+opt.scrolloff = 10
