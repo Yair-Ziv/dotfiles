@@ -30,6 +30,8 @@ Plug 'tpope/vim-commentary'
 " Hard time
 Plug 'takac/vim-hardtime'
 
+Plug 'justinmk/vim-sneak'
+
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
 "map \r <Action>(ReformatCode)
