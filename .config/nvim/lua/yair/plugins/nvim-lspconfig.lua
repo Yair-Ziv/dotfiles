@@ -66,6 +66,30 @@ return {
     require('mason-lspconfig').setup()
     require('neodev').setup()
 
+    -- Configure diagnostics (modern way for Neovim 0.11+)
+    vim.diagnostic.config({
+      virtual_text = {
+        enabled = true,
+        source = "always",
+        prefix = '●',
+      },
+      float = {
+        source = "always",
+        border = "rounded",
+      },
+      signs = {
+        text = {
+          [vim.diagnostic.severity.ERROR] = "󰅚",
+          [vim.diagnostic.severity.WARN] = "󰀪",
+          [vim.diagnostic.severity.HINT] = "󰌶",
+          [vim.diagnostic.severity.INFO] = "",
+        },
+      },
+      underline = true,
+      update_in_insert = false,
+      severity_sort = true,
+    })
+
     -- Enable the following language servers
     --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
     --
@@ -75,13 +99,7 @@ return {
     --  If you want to override the default filetypes that your language server will attach to you can
     --  define the property 'filetypes' to the map in question.
     local servers = {
-      -- clangd = {},
-      -- gopls = {},
-      -- pyright = {},
-      -- rust_analyzer = {},
-      -- tsserver = {},
-      -- html = { filetypes = { 'html', 'twig', 'hbs'} },
-
+      -- Lua (for Neovim configuration)
       lua_ls = {
         Lua = {
           workspace = { checkThirdParty = false },
@@ -90,6 +108,26 @@ return {
           -- diagnostics = { disable = { 'missing-fields' } },
         },
       },
+
+      -- Web Development
+      ts_ls = {},
+      html = { filetypes = { 'html', 'twig', 'hbs'} },
+      cssls = {},
+
+      -- Python
+      pyright = {},
+
+      -- .NET / C#
+      omnisharp = {},
+
+      -- JSON
+      jsonls = {},
+
+      -- YAML
+      yamlls = {},
+
+      -- Markdown
+      marksman = {},
     }
 
     -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
@@ -104,6 +142,26 @@ return {
     mason_lspconfig.setup {
       ensure_installed = vim.tbl_keys(servers),
     }
+
+    -- Get the lspconfig module
+    local lspconfig = require('lspconfig')
+
+    -- Setup each language server
+    for server_name, server_config in pairs(servers) do
+      local setup_config = {
+        capabilities = capabilities,
+        on_attach = on_attach,
+        settings = server_config,
+        filetypes = server_config.filetypes,
+      }
+
+      -- Special handling for omnisharp if csharp_ls doesn't work
+      if server_name == "omnisharp" then
+        setup_config.cmd = { "omnisharp", "--languageserver", "--hostPID", tostring(vim.fn.getpid()) }
+      end
+
+      lspconfig[server_name].setup(setup_config)
+    end
 
   end
 }
