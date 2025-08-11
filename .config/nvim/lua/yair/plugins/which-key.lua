@@ -32,7 +32,7 @@ return {
         mode = { "v" },
         { "<leader>", group = "VISUAL <leader>" },
         { "<leader>h", desc = "Git [H]unk" },
-        { "<leader>sc", ":Silicon<CR>", desc = "Silicon Capture" },
+        { "<leader>cs", ":CodeSnap<CR>", desc = "Code Snap" },
       }
     })
 

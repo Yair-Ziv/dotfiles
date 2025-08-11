@@ -15,6 +15,9 @@ alias lll='ls -alFh'
 alias la='ls -a'
 alias l='ls -CF'
 
+# GREP
+alias rgrep='grep -r'
+
 # TMUX
 alias tmux='tmux -u'
 alias ta='tmux -u a'
@@ -65,3 +68,5 @@ dcupe() {
 
 # Unaliases
 unalias y
+
+[[ -f ~/.localAliases ]] && source ~/.localAliases

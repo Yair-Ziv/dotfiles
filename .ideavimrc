@@ -7,6 +7,7 @@ set number
 set relativenumber
 set ignorecase
 set smartcase
+set nowrap
 imap jj <Esc>
 
 "" -- Suggested options --
@@ -17,6 +18,8 @@ set scrolloff=5
 " Do incremental searching.
 set incsearch
 
+set which-key
+
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
@@ -25,12 +28,27 @@ map Q gq
 
 " Highlight copied text
 Plug 'machakann/vim-highlightedyank'
+
 " Commentary plugin
 Plug 'tpope/vim-commentary'
-" Hard time
-Plug 'takac/vim-hardtime'
 
+" Sneak
 Plug 'justinmk/vim-sneak'
+
+" Surround
+Plug 'tpope/vim-surround'
+
+" HighlightedYank
+Plug 'machakann/vim-highlightedyank'
+
+" Paragraph-Motion
+Plug 'dbakker/vim-paragraph-motion'
+
+" EastMotion
+Plug 'easymotion/vim-easymotion'
+
+" Quickscope
+set quickscope
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
