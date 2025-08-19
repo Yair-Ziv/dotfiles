@@ -70,3 +70,6 @@ dcupe() {
 unalias y
 
 [[ -f ~/.localAliases ]] && source ~/.localAliases
+
+alias todo='vim ~/Documents/TODO.md'
+alias daily='vim ~/Documents/Daily.md'
