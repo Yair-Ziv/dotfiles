@@ -25,3 +25,5 @@ hs.hotkey.bind(baseShortcuts, "s", open("Slack"))
 hs.hotkey.bind(baseShortcuts, "c", open("Cursor"))
 
 hs.hotkey.bind(baseShortcuts, "f", open("Firefox"))
+
+hs.hotkey.bind(baseShortcuts, "z", open("zoom.us"))
