@@ -67,3 +67,6 @@ imap <A-j> <C-n>
 imap <A-k> <C-p>
 
 vnoremap <Leader>p "_dP
+nnoremap Y y$
+
+set clipboard+=unnamed

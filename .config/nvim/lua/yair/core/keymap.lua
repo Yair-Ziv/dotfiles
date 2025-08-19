@@ -24,6 +24,9 @@ kmap.set('v', '<leader>p', "\"_dP")
 kmap.set('n', '<leader>vsv', '<C-w>v', { desc = 'Split window vertically' })
 kmap.set('n', '<leader>vsh', '<C-w>s', { desc = 'Split window horizontally' })
 
+-- Yank
+kmap.set('n', 'Y', 'y$', { noremap = true })
+
 -- Exit insert mode with jj instead of Escape
 -- Funnily enough, it was hard to type that comment
 -- cause it kept going back to normal mode and deleting the jj (it happened again)
