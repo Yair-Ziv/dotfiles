@@ -21,7 +21,7 @@ export ZOXIDE_CMD_OVERRIDE=cd
 ZSH_THEME="re5et"
 
 # PLUGINS
-plugins=(battery colorize colored-man-pages docker docker-compose git kubectl web-search yarn)
+plugins=(battery colorize colored-man-pages docker docker-compose git kubectl web-search yarn zoxide)
 
 source $ZSH/oh-my-zsh.sh
 source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
