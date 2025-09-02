@@ -27,3 +27,7 @@ hs.hotkey.bind(baseShortcuts, "c", open("Cursor"))
 hs.hotkey.bind(baseShortcuts, "f", open("Firefox"))
 
 hs.hotkey.bind(baseShortcuts, "z", open("zoom.us"))
+
+hs.hotkey.bind(baseShortcuts, "i", open("iTerm"))
+
+hs.hotkey.bind(baseShortcuts, "p", open("Postman"))
