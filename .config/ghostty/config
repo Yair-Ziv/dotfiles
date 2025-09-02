@@ -9,3 +9,5 @@ theme = "kanagawabones"
 quit-after-last-window-closed = true
 
 window-decoration = none
+
+confirm-close-surface = false
