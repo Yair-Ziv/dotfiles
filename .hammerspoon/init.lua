@@ -1,4 +1,8 @@
-local baseShortcuts = {"cmd", "alt", "ctrl"}
+-- =========================
+-- App hotkeys (launch/focus)
+-- =========================
+
+local mod = {"cmd", "alt", "ctrl"}
 
 local function open(name)
     return function()
@@ -6,28 +10,24 @@ local function open(name)
     end
 end
 
-hs.hotkey.bind(baseShortcuts, "t", open("Ghostty"))
+-- Keep order explicit & tidy
+local bindings = {
+    { "t", "Ghostty" },
+    { "r", "Rider" },
+    { "d", "DataGrip" },
+    { "a", "Google Chrome" },
+    { "o", "OpenLens" },
+    { "w", "WebStorm" },
+    { "m", "Microsoft Outlook" },
+    { "s", "Slack" },
+    { "c", "Cursor" },
+    { "f", "Firefox" },
+    { "z", "zoom.us" },
+    { "i", "iTerm" },
+    { "p", "Postman" },
+}
 
-hs.hotkey.bind(baseShortcuts, "r", open("Rider"))
-
-hs.hotkey.bind(baseShortcuts, "d", open("DataGrip"))
-
-hs.hotkey.bind(baseShortcuts, "a", open("Google Chrome"))
-
-hs.hotkey.bind(baseShortcuts, "o", open("OpenLens"))
-
-hs.hotkey.bind(baseShortcuts, "w", open("WebStorm"))
-
-hs.hotkey.bind(baseShortcuts, "m", open("Microsoft Outlook"))
-
-hs.hotkey.bind(baseShortcuts, "s", open("Slack"))
-
-hs.hotkey.bind(baseShortcuts, "c", open("Cursor"))
-
-hs.hotkey.bind(baseShortcuts, "f", open("Firefox"))
-
-hs.hotkey.bind(baseShortcuts, "z", open("zoom.us"))
-
-hs.hotkey.bind(baseShortcuts, "i", open("iTerm"))
-
-hs.hotkey.bind(baseShortcuts, "p", open("Postman"))
+for _, map in ipairs(bindings) do
+    local key, app = map[1], map[2]
+    hs.hotkey.bind(mod, key, open(app))
+end
