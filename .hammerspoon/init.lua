@@ -20,11 +20,14 @@ local bindings = {
     { "w", "WebStorm" },
     { "m", "Microsoft Outlook" },
     { "s", "Slack" },
-    { "c", "Cursor" },
+    { "c", "Visual Studio Code" },
     { "f", "Firefox" },
     { "z", "zoom.us" },
     { "i", "iTerm" },
     { "p", "Postman" },
+    { "x", "Redis Insight" },
+    { "n", "Windows App" },
+    { "e", "Sublime Text" },
 }
 
 for _, map in ipairs(bindings) do
