@@ -3,6 +3,7 @@ font-size = 22
 font-feature = -calt, -liga, -dlig
 
 macos-icon = microchip
+macos-option-as-alt = true
 
 theme = "kanagawabones"
 
@@ -11,3 +12,4 @@ quit-after-last-window-closed = true
 window-decoration = none
 
 confirm-close-surface = false
+keybind = shift+enter=text:\x1b\r
