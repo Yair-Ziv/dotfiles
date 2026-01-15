@@ -43,6 +43,7 @@ alias gce='git commit --allow-empty'
 alias gpt='git push --tags'
 alias glr='git pull --rebase'
 alias glra='git pull --rebase --autostash'
+alias grbod='git rebase origin/$(git_develop_branch)'
 
 # YAZI
 alias yz='yazi'
