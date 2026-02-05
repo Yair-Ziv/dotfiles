@@ -1,4 +1,5 @@
-font-family = FiraCode Nerd Font Mono Reg
+#font-family = FiraCode Nerd Font Mono Reg
+font-family = Space Mono
 font-size = 22
 font-feature = -calt, -liga, -dlig
 
