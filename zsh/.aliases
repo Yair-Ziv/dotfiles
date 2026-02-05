@@ -75,6 +75,7 @@ dcupe() {
 alias k='k9s'
 
 # Claude
+alias c='claude'
 alias clc='claude -c'
 
 # Unaliases
