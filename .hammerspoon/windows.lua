@@ -2,6 +2,7 @@ local mod = {"cmd", "alt", "ctrl"}
 local modShift = {"cmd", "alt", "ctrl", "shift"}
 
 local ultrawideName = "S34C65"
+local ultraSideSize = 0.23
 
 local function focusedWindow()
     return hs.window.focusedWindow()
@@ -45,7 +46,7 @@ end
 
 hs.hotkey.bind(mod, "h", function()
     if isUltra() then
-        move({x = 0.00, y = 0.00, w = 0.20, h = 1.00})
+        move({x = 0.00, y = 0.00, w = ultraSideSize, h = 1.00})
     else
         move({x = 0.00, y = 0.00, w = 0.50, h = 1.00})
     end
@@ -53,7 +54,7 @@ end)
 
 hs.hotkey.bind(mod, "l", function()
     if isUltra() then
-        move({x = 0.80, y = 0.00, w = 0.20, h = 1.00})
+        move({x = 1 - ultraSideSize, y = 0.00, w = ultraSideSize, h = 1.00})
     else
         move({x = 0.50, y = 0.00, w = 0.50, h = 1.00})
     end
@@ -72,7 +73,12 @@ hs.hotkey.bind(mod, "return", function()
     if not win then return end
 
     if isUltra() then
-        move({x = 0.20, y = 0.00, w = 0.60, h = 1.00})
+        move({
+            x = ultraSideSize,
+            y = 0.00,
+            w = 1 - (2 * ultraSideSize),
+            h = 1.00
+        })
     else
         win:maximize()
     end
