@@ -15,7 +15,11 @@ export PATH=$(echo "$PATH" | awk -v RS=: -v ORS=: '!n[$0]++' | sed 's/:$//')
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR=nvim
 export VISUAL=nvim
-export ZOXIDE_CMD_OVERRIDE=cd
+
+
+if [ -z "$DISABLE_ZOXIDE" ]; then
+  eval "$(zoxide init --cmd cd zsh)"
+fi
 
 # THEME
 ZSH_THEME="re5et"

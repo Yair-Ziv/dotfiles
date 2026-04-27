@@ -44,6 +44,7 @@ alias gpt='git push --tags'
 alias glr='git pull --rebase'
 alias glra='git pull --rebase --autostash'
 alias grbod='git rebase origin/$(git_develop_branch)'
+alias grevh='git revert HEAD'
 
 # YAZI
 alias yz='yazi'
@@ -77,6 +78,7 @@ alias k='k9s'
 # Claude
 alias c='claude'
 alias clc='claude -c'
+alias clr='claude -r'
 
 # Unaliases
 unalias y
