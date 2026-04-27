@@ -143,25 +143,27 @@ return {
       ensure_installed = vim.tbl_keys(servers),
     }
 
-    -- Get the lspconfig module
-    local lspconfig = require('lspconfig')
+    vim.api.nvim_create_autocmd('LspAttach', {
+      callback = function(event)
+        on_attach(vim.lsp.get_client_by_id(event.data.client_id), event.buf)
+      end,
+    })
 
-    -- Setup each language server
     for server_name, server_config in pairs(servers) do
-      local setup_config = {
+      local config = {
         capabilities = capabilities,
-        on_attach = on_attach,
         settings = server_config,
         filetypes = server_config.filetypes,
       }
 
-      -- Special handling for omnisharp if csharp_ls doesn't work
       if server_name == "omnisharp" then
-        setup_config.cmd = { "omnisharp", "--languageserver", "--hostPID", tostring(vim.fn.getpid()) }
+        config.cmd = { "omnisharp", "--languageserver", "--hostPID", tostring(vim.fn.getpid()) }
       end
 
-      lspconfig[server_name].setup(setup_config)
+      vim.lsp.config(server_name, config)
     end
+
+    vim.lsp.enable(vim.tbl_keys(servers))
 
   end
 }
