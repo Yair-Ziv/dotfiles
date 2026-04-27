@@ -20,7 +20,7 @@ local appBindings = {
     { "z", "zoom.us" },
     { "i", "iTerm" },
     { "p", "Postman" },
-    { "x", "Redis Insight" },
+    { "x", "Obsidian" },
     { "n", "Windows App" },
     { "e", "Sublime Text" },
 }

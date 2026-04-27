@@ -44,6 +44,8 @@ local function moveScreen(direction)
     end
 end
 
+hs.window.animationDuration = 0
+
 hs.hotkey.bind(mod, "h", function()
     if isUltra() then
         move({x = 0.00, y = 0.00, w = ultraSideSize, h = 1.00})
